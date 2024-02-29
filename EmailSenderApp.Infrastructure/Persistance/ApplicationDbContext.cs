@@ -1,4 +1,5 @@
-﻿using EmailSenderApp.Domain.Entites.Models.AuthModels;
+﻿using EmailSenderApp.Domain.Entites.Models;
+using EmailSenderApp.Domain.Entites.Models.AuthModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmailSenderApp.Infrastructure.Persistance
@@ -10,6 +11,7 @@ namespace EmailSenderApp.Infrastructure.Persistance
             Database.Migrate();
         }
 
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Teacher> Teachers { get; set; }
     }
 }

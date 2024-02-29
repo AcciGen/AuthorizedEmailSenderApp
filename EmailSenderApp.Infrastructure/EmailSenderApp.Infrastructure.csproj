@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmailSenderApp.Application\EmailSenderApp.Application.csproj" />
+    <ProjectReference Include="..\EmailSenderApp.Domain\EmailSenderApp.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

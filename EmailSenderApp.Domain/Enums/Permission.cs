@@ -12,11 +12,11 @@ namespace EmailSenderApp.Domain.Enums
         GetAllStudents = 2,
         UpdateStudent = 3,
         DeleteStudent = 4,
-        GetStudentByUserName = 5,
+        GetStudentById = 5,
         CreateTeacher = 6,
         GetAllTeachers = 7,
         UpdateTeacher = 8,
         DeleteTeacher = 9,
-        GetTeacherByUserName = 10
+        GetTeacherById = 10
     }
 }
