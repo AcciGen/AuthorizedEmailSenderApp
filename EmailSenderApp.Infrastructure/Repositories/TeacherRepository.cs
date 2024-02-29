@@ -3,7 +3,6 @@ using EmailSenderApp.Domain.Entites.Models;
 using EmailSenderApp.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System.Data.Entity;
 
 namespace EmailSenderApp.Infrastructure.Repositories
 {
