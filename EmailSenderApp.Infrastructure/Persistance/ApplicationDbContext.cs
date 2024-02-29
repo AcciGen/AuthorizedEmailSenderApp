@@ -1,5 +1,4 @@
 ﻿using EmailSenderApp.Domain.Entites.Models;
-using EmailSenderApp.Domain.Entites.Models.AuthModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmailSenderApp.Infrastructure.Persistance

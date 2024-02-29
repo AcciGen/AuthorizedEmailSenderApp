@@ -1,9 +1,7 @@
 ﻿using EmailSenderApp.API.Attributes;
 using EmailSenderApp.Application.Abstractions.Repositories;
 using EmailSenderApp.Domain.Entites.Models;
-using EmailSenderApp.Domain.Entites.Models.AuthModels;
 using EmailSenderApp.Domain.Enums;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmailSenderApp.API.Controllers

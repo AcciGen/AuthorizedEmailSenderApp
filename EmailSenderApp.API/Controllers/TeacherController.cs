@@ -2,7 +2,7 @@
 using EmailSenderApp.Application.Abstractions.Repositories;
 using EmailSenderApp.Domain.Entites.Models;
 using EmailSenderApp.Domain.Enums;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmailSenderApp.API.Controllers
@@ -34,7 +34,7 @@ namespace EmailSenderApp.API.Controllers
         }
 
         [HttpGet]
-        [IdentityFilter(Permission.GetAllTeachers)]
+        [Authorize(Roles = "Teacher")]
         public async Task<IActionResult> GetAllTeachersAsync()
         {
             var result = await _teacherRepository.SelectAllAsync();

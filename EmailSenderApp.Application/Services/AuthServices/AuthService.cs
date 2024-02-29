@@ -94,7 +94,7 @@ namespace EmailSenderApp.Application.Services.AuthServices
 
         public bool UserExist(User user)
         {
-            List<string> logins = [ "admin", "user" ];
+            List<string> logins = ["admin", "user"];
             var password = "root";
 
             if (user.Login == logins[0] || user.Login == logins[1] && user.Password == password)

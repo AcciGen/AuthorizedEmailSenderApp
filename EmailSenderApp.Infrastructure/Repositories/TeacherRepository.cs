@@ -1,14 +1,9 @@
 ﻿using EmailSenderApp.Application.Abstractions.Repositories;
 using EmailSenderApp.Domain.Entites.Models;
-using EmailSenderApp.Domain.Entites.Models.AuthModels;
 using EmailSenderApp.Infrastructure.Persistance;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmailSenderApp.Infrastructure.Repositories
 {

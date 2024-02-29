@@ -16,7 +16,7 @@ namespace EmailSenderApp.API.Attributes
         }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var identity  = context.HttpContext.User.Identity as ClaimsIdentity;
+            var identity = context.HttpContext.User.Identity as ClaimsIdentity;
 
             var permissionIds = identity.FindFirst("Permissions")?.Value;
 
