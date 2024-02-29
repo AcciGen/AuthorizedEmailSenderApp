@@ -10,9 +10,9 @@ namespace EmailSenderApp.Application.Abstractions.Repositories
     public interface IUserRepository
     {
         public Task<User> InsertAsync(User user);
-        public Task<User> SelectByIdAsync(long id);
         public Task<List<User>> SelectAllAsync();
-        public Task<User> UpdateAsync(User user, long id);
-        public Task<User> DeleteAsync(long id);
+        public Task<User> UpdateAsync(User user, string username);
+        public Task<User> DeleteAsync(string username);
+        public Task<User> SelectByUserNameAsync(string username);
     }
 }

@@ -9,14 +9,14 @@ namespace EmailSenderApp.Domain.Enums
     public enum Permission
     {
         CreateStudent = 1,
-        DeleteStudent = 2,
+        GetAllStudents = 2,
         UpdateStudent = 3,
-        GetStudentById = 4,
-        GetAllStudents = 5,
-        GetAllTeachers = 6,
-        GetTeacherById = 7,
-        CreateTeacher = 8,
+        DeleteStudent = 4,
+        GetStudentByUserName = 5,
+        CreateTeacher = 6,
+        GetAllTeachers = 7,
+        UpdateTeacher = 8,
         DeleteTeacher = 9,
-        UpdateTeacher = 10
+        GetTeacherByUserName = 10
     }
 }

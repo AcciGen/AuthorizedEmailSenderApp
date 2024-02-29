@@ -22,7 +22,7 @@ namespace EmailSenderApp.Application.Services.AuthServices
         {
             if (user == null)
             {
-                return "User Will be Null";
+                return "User will be Null";
             }
 
             if (UserExist(user))
@@ -35,7 +35,7 @@ namespace EmailSenderApp.Application.Services.AuthServices
                 }
                 else if (user.Role == "Student")
                 {
-                    permissions = new List<int>() { 5, 7, 3, 4 };
+                    permissions = new List<int>() { 2, 5 };
                 }
                 else if (user.Role == "Admin")
                 {
@@ -57,7 +57,7 @@ namespace EmailSenderApp.Application.Services.AuthServices
             }
             else
             {
-                return "User UnAuthorithe 401";
+                return "User UnAuthorize 401";
             }
 
         }
@@ -94,10 +94,10 @@ namespace EmailSenderApp.Application.Services.AuthServices
 
         public bool UserExist(User user)
         {
-            var login = "admin";
-            var password = "123";
+            List<string> logins = [ "admin", "user" ];
+            var password = "root";
 
-            if (user.Login == login && user.Password == password)
+            if (user.Login == logins[0] || user.Login == logins[1] && user.Password == password)
             {
                 return true;
             }

@@ -31,24 +31,13 @@ namespace EmailSenderApp.Infrastructure.Repositories
         public async Task<List<User>> SelectAllAsync()
             => await _dbContext.Users.ToListAsync();
 
-        public async Task<User> SelectByIdAsync(long id)
+        public async Task<User> UpdateAsync(User user, string username)
         {
-            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.userId == id);
+            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == username);
 
             if (storedUser is null)
                 return null!;
 
-            return storedUser!;
-        }
-
-        public async Task<User> UpdateAsync(User user, long id)
-        {
-            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.userId == id);
-
-            if (storedUser is null)
-                return null!;
-
-            storedUser.Id = user.Id;
             storedUser.UserName = user.UserName;
             storedUser.Login = user.Login;
             storedUser.Password = user.Password;
@@ -59,9 +48,9 @@ namespace EmailSenderApp.Infrastructure.Repositories
             return entry.Entity;
         }
 
-        public async Task<User> DeleteAsync(long id)
+        public async Task<User> DeleteAsync(string username)
         {
-            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.userId == id);
+            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == username);
 
             if (storedUser is null)
                 return null!;
@@ -69,6 +58,16 @@ namespace EmailSenderApp.Infrastructure.Repositories
             var entry = _dbContext.Remove(storedUser);
             await _dbContext.SaveChangesAsync();
             return entry.Entity;
+        }
+
+        public async Task<User> SelectByUserNameAsync(string username)
+        {
+            var storedUser = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == username);
+
+            if (storedUser is null)
+                return null!;
+
+            return storedUser!;
         }
     }
 }
