@@ -1,8 +1,13 @@
-﻿namespace EmailSenderApp.Domain.Entites.Models.AuthModels
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmailSenderApp.Domain.Entites.DTOs
 {
-    public class User
+    public class UserDTO
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
         public long userId { get; set; }
         public string UserName { get; set; }
         public string Login { get; set; }

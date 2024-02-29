@@ -13,17 +13,26 @@ namespace EmailSenderApp.API.Controllers.AuthController
     {
         List<string> users = new List<string>()
         {
-            "Student 1", "" +
-            "Student 2","Student 3","Student 4","Student 5","Student 6"
+            "Student 1", "Student 2", "Student 3", "Student 4", "Student 5", "Student 6"
         };
 
         List<string> teachers = new List<string>()
         {
-            "Teacher 1", "Teacher 2","Teacher 3","Teacher 4","Teacher 5","Teacher 6"
+            "Teacher 1", "Teacher 2", "Teacher 3", "Teacher 4", "Teacher 5", "Teacher 6"
         };
 
-        [HttpGet]
-        [IdentityFilter(Permission.GetAllStudents)]
+        //CreateStudent
+        //DeleteStudent
+        //UpdateStudent
+        //GetStudentByI
+        //GetAllStudent
+        //GetAllTeacher
+        //GetTeacherByI
+        //CreateTeacher
+        //DeleteTeacher
+        //UpdateTeacher
+        [HttpPost]
+        [IdentityFilter(Permission.CreateStudent)]
         public IActionResult GetStudents()
         {
             return Ok(users);

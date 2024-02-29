@@ -23,14 +23,7 @@ namespace EmailSenderApp.API.Controllers
 
             await _emailService.SendEmailAsync(model);
 
-            return Ok("Muvoffaqiyatli email yuborildi");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetMail()
-        {
-
-            return Ok("Muvoffaqiyatli email yuborildi");
+            return Ok("Message was sent successfully!");
         }
 
 

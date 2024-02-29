@@ -31,7 +31,7 @@ namespace EmailSenderApp.Application.Services.AuthServices
 
                 if (user.Role == "Teacher")
                 {
-                    permissions = new List<int>() { 1, 2, 3, 4 };
+                    permissions = new List<int>() { 1, 2, 3, 4, 5 };
                 }
                 else if (user.Role == "Student")
                 {
